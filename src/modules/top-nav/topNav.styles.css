@@ -1,0 +1,18 @@
+#top-nav-bar-container {
+    display: flex;
+    gap: var(--spacing);
+    font-size: 20px;
+    padding: var(--spacing);
+}
+
+.top-nav-item {
+    cursor: pointer;
+}
+
+.top-nav-item.selected {
+    border-bottom: 1px solid #FFD580;
+}
+
+.top-nav-item:hover {
+    color: var(--foreground-hover);
+}
