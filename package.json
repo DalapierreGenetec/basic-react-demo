@@ -1,0 +1,17 @@
+{
+	"name": "basic-react-demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@portal/components": "file:src/components",
+		"@portal/libs": "file:src/libs",
+		"@prtal/modules": "file:src/modules"
+	}
+}
