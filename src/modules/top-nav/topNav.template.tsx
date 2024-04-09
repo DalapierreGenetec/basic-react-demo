@@ -1,7 +1,7 @@
 import { TopNavItem } from "@portal/libs/top-nav/topNavItem";
 
 const TopNavItemTemplate = (item: TopNavItem) => (
-    <div>
+    <div key={item.display}>
         {item.display}
     </div>
 );
