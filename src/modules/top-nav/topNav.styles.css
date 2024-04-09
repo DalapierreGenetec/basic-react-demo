@@ -3,6 +3,7 @@
     gap: var(--spacing);
     font-size: 20px;
     padding: var(--spacing);
+    background-color: #232323;
 }
 
 .top-nav-item {
@@ -10,7 +11,7 @@
 }
 
 .top-nav-item.selected {
-    border-bottom: 1px solid #FFD580;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .top-nav-item:hover {
