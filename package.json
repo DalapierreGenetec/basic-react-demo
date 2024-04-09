@@ -13,13 +13,14 @@
 	"dependencies": {
 		"@portal/components": "file:src/components",
 		"@portal/libs": "file:src/libs",
-		"@prtal/modules": "file:src/modules",
+		"@portal/modules": "file:src/modules",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.75",
 		"@types/react-dom": "^18.2.24",
+		"css-loader": "^7.1.0",
 		"html-webpack-plugin": "^5.6.0",
 		"ts-loader": "^9.5.1",
 		"typescript": "^5.4.4",

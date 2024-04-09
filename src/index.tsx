@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./index.css";
+import { EntryPoint } from '@portal/modules/entry-point';
 
 const App: React.FC = () => {
-  return <div>Hello, world!</div>;
+  return <EntryPoint />;
 };
 
 const rootElement = document.getElementById('root');
