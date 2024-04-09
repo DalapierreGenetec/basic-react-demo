@@ -12,6 +12,17 @@
 	"dependencies": {
 		"@portal/components": "file:src/components",
 		"@portal/libs": "file:src/libs",
-		"@prtal/modules": "file:src/modules"
+		"@prtal/modules": "file:src/modules",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.75",
+		"@types/react-dom": "^18.2.24",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.4.4",
+		"webpack": "^5.91.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^5.0.4"
 	}
 }
