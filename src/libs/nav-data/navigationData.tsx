@@ -1,3 +1,8 @@
+import { About } from '@portal/modules/about';
+import { CameraFeeds } from '@portal/modules/camera-feeds';
+import { NotImplemented } from '@portal/modules/not-implemented';
+import { Overview } from '@portal/modules/overview';
+
 export interface TopNavItem {
     type: TopNavigationType,
     display: string
@@ -25,24 +30,24 @@ export const TopNavigation: TopNavItem[] = [
 ];
 
 export const dashboardSidebarNavItems: SidebarNavItem[] = [
-    { display: 'Overview' },
-    { display: 'Camera feeds' },
-    { display: 'Inventory' }
+    { display: 'Overview', content: <Overview /> },
+    { display: 'Camera feeds', content: <CameraFeeds /> },
+    { display: 'Inventory', content: <NotImplemented /> }
 ];
 
 export const configurationSidebarNavItems: SidebarNavItem[] = [
-    { display: 'Network' },
-    { display: 'Security' },
-    { display: 'Cameras' }
+    { display: 'Network', content: <NotImplemented />  },
+    { display: 'Security', content: <NotImplemented />  },
+    { display: 'Cameras', content: <NotImplemented />  }
 ]
 
 export const diagnosticsSidebarNavItems: SidebarNavItem[] = [
-    { display: 'Logs' },
-    { display: 'Log Sources' }
+    { display: 'Logs', content: <NotImplemented />  },
+    { display: 'Log Sources', content: <NotImplemented />  }
 ];
 
 export const helpSidebarNavItems: SidebarNavItem[] = [
-    { display: 'About' },
-    { display: 'Documentation' },
-    { display: 'Advanced settings' }
+    { display: 'About', content: <About />  },
+    { display: 'Documentation', content: <NotImplemented />  },
+    { display: 'Advanced settings', content: <NotImplemented />  }
 ];
