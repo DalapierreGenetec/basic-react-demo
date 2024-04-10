@@ -17,7 +17,10 @@ export const EntryPoint = () => {
     }, [])
 
     useEffect(() => {
-
+        const newNavData = NavigationData.find(item => item.topNav === currentNav);
+        if (newNavData) {
+            setSidebarNavItems(newNavData.sideNav);
+        }
     }, [currentNav])
     
 

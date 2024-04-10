@@ -9,6 +9,7 @@
 .top-nav-item {
     margin: auto 0;
     cursor: pointer;
+    user-select: none;
 }
 
 .top-nav-item.selected {
