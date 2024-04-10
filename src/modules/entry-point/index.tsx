@@ -1,7 +1,7 @@
 import { EntryPointTemplate } from "./entryPoint.template";
 import "./entryPoint.styles.css";
 import { useEffect, useState } from "react";
-import { SidebarNavItem, TopNavItem, TopNavigation, TopNavigationType, configurationSidebarNavItems, dashboardSidebarNavItems, diagnosticsSidebarNavItems, helpSidebarNavItems, topNavigationTypes } from "@portal/libs/nav-data/navigationData";
+import { SidebarNavItem, TopNavigation, TopNavigationType, configurationSidebarNavItems, dashboardSidebarNavItems, diagnosticsSidebarNavItems, helpSidebarNavItems, topNavigationTypes } from "@portal/libs/nav-data/navigationData";
 
 
 export const EntryPoint = () => {
