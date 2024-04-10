@@ -37,7 +37,11 @@ export const EntryPoint = () => {
                 break;
         }
     }, [currentTopNav])
+
+    const handleSidebarNav = (sidebarNavItem: SidebarNavItem) => {
+        setCurrentSidebarNav(sidebarNavItem);
+    }
     
 
-    return EntryPointTemplate(sidebarNavItems, TopNavigation, currentTopNav, currentSidebarNav);
+    return EntryPointTemplate(sidebarNavItems, TopNavigation, handleSidebarNav, currentTopNav, currentSidebarNav);
 }
