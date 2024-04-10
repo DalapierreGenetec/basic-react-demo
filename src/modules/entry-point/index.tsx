@@ -6,6 +6,7 @@ import { SidebarNavItem, TopNavigation, TopNavigationType, configurationSidebarN
 
 export const EntryPoint = () => {
 
+    const [currentContent, setCurrentContent] = useState<JSX.Element>();
     const [currentTopNav, setCurrentTopNav] = useState<TopNavigationType>();
     const [currentSidebarNav, setCurrentSidebarNav] = useState<SidebarNavItem>();
     const [sidebarNavItems, setSidebarNavItems] = useState<SidebarNavItem[]>([]);
@@ -43,6 +44,10 @@ export const EntryPoint = () => {
         }
     }, [currentTopNav])
 
+    useEffect(() => {
+        setCurrentContent(currentSidebarNav?.content);
+    }, [currentSidebarNav])
+
     const handleSidebarNav = (sidebarNavItem: SidebarNavItem) => {
         setCurrentSidebarNav(sidebarNavItem);
     }
@@ -52,5 +57,5 @@ export const EntryPoint = () => {
     }
     
 
-    return EntryPointTemplate(sidebarNavItems, TopNavigation, handleTopNav, handleSidebarNav, currentTopNav, currentSidebarNav);
+    return EntryPointTemplate(sidebarNavItems, TopNavigation, handleTopNav, handleSidebarNav, currentTopNav, currentSidebarNav, currentContent);
 }
