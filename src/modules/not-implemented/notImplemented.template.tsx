@@ -1,5 +1,5 @@
 export const NotImplementedTemplate = () => (
-    <div>
-        Not implemented
+    <div id="not-implemented">
+        <p>Not implemented</p>
     </div>
 );

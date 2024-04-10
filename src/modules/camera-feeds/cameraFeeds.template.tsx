@@ -1,5 +1,5 @@
 export const CameraFeedsTemplate = () => (
-    <div>
-        Hello camera feeds
+    <div id="camera-feeds">
+        <p>Hello camera feeds</p>
     </div>
 );

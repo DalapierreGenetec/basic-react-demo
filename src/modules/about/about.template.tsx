@@ -1,5 +1,5 @@
 export const AboutTemplate = () => (
-    <div>
-        Hello about
+    <div id="about">
+        <p>Hello about</p>
     </div>
 );

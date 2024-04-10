@@ -1,3 +1,5 @@
 export const OverviewTemplate = () => (
-    <div>Hello overview</div>
+    <div id="overview">
+        <p>Hello overview</p>
+    </div>
 );
