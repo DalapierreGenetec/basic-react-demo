@@ -1,4 +1,5 @@
 import { SidebarNavItem } from "@portal/libs/nav-data/navigationData";
+import { SidebarProps } from "./sidebar.props";
 
 
 const renderSidebarItem = (item: SidebarNavItem, selected: boolean) => (
@@ -7,8 +8,8 @@ const renderSidebarItem = (item: SidebarNavItem, selected: boolean) => (
     </div>
 );
 
-export const SidebarContainerTemplate = (items?: SidebarNavItem[]) => (
+export const SidebarContainerTemplate = (props: SidebarProps) => (
     <div id="sidebar-container">
-        {items?.map(item => renderSidebarItem(item, false))}
+        {props.sidebarItems?.map(item => renderSidebarItem(item, item.display === props.currentNavItem?.display))}
     </div>
 );

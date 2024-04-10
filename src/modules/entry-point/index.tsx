@@ -6,19 +6,22 @@ import { SidebarNavItem, TopNavigation, TopNavigationType, configurationSidebarN
 
 export const EntryPoint = () => {
 
-    const [currentNav, setCurrentNav] = useState<TopNavigationType>();
+    const [currentTopNav, setCurrentTopNav] = useState<TopNavigationType>();
+    const [currentSidebarNav, setCurrentSidebarNav] = useState<SidebarNavItem>();
     const [sidebarNavItems, setSidebarNavItems] = useState<SidebarNavItem[]>([]);
 
     useEffect(() => {
         if (TopNavigation.length > 0) {
             const defaultNav = TopNavigation[0];
-            setCurrentNav(defaultNav.type);
-
+            setCurrentTopNav(defaultNav.type);
+        }
+        if (dashboardSidebarNavItems.length > 0) {
+            setCurrentSidebarNav(dashboardSidebarNavItems[0]);
         }
     }, [])
 
     useEffect(() => {
-        switch (currentNav) {
+        switch (currentTopNav) {
             case topNavigationTypes.dashboard:
                 setSidebarNavItems(dashboardSidebarNavItems);
                 break;
@@ -33,8 +36,8 @@ export const EntryPoint = () => {
             default:
                 break;
         }
-    }, [currentNav])
+    }, [currentTopNav])
     
 
-    return EntryPointTemplate(sidebarNavItems, TopNavigation, currentNav);
+    return EntryPointTemplate(sidebarNavItems, TopNavigation, currentTopNav, currentSidebarNav);
 }
