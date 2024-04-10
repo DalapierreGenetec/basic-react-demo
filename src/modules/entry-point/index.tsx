@@ -24,15 +24,20 @@ export const EntryPoint = () => {
         switch (currentTopNav) {
             case topNavigationTypes.dashboard:
                 setSidebarNavItems(dashboardSidebarNavItems);
+                setCurrentSidebarNav(dashboardSidebarNavItems[0]);
                 break;
             case topNavigationTypes.configuration:
                 setSidebarNavItems(configurationSidebarNavItems);
+                setCurrentSidebarNav(configurationSidebarNavItems[0]);
                 break;
             case topNavigationTypes.diagnostics:
                 setSidebarNavItems(diagnosticsSidebarNavItems);
+                setCurrentSidebarNav(diagnosticsSidebarNavItems[0]);
                 break;
             case topNavigationTypes.help:
                 setSidebarNavItems(helpSidebarNavItems);
+                setCurrentSidebarNav(helpSidebarNavItems[0]);
+                break;
             default:
                 break;
         }
@@ -41,7 +46,11 @@ export const EntryPoint = () => {
     const handleSidebarNav = (sidebarNavItem: SidebarNavItem) => {
         setCurrentSidebarNav(sidebarNavItem);
     }
+
+    const handleTopNav = (topNav: TopNavigationType) => {
+        setCurrentTopNav(topNav);
+    }
     
 
-    return EntryPointTemplate(sidebarNavItems, TopNavigation, handleSidebarNav, currentTopNav, currentSidebarNav);
+    return EntryPointTemplate(sidebarNavItems, TopNavigation, handleTopNav, handleSidebarNav, currentTopNav, currentSidebarNav);
 }
