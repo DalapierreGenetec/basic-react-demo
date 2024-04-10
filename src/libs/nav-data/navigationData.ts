@@ -29,3 +29,20 @@ export const dashboardSidebarNavItems: SidebarNavItem[] = [
     { display: 'Camera feeds' },
     { display: 'Inventory' }
 ];
+
+export const configurationSidebarNavItems: SidebarNavItem[] = [
+    { display: 'Network' },
+    { display: 'Security' },
+    { display: 'Cameras' }
+]
+
+export const diagnosticsSidebarNavItems: SidebarNavItem[] = [
+    { display: 'Logs' },
+    { display: 'Log Sources' }
+];
+
+export const helpSidebarNavItems: SidebarNavItem[] = [
+    { display: 'About' },
+    { display: 'Documentation' },
+    { display: 'Advanced settings' }
+];

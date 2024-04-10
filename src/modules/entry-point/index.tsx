@@ -1,7 +1,7 @@
 import { EntryPointTemplate } from "./entryPoint.template";
 import "./entryPoint.styles.css";
 import { useEffect, useState } from "react";
-import { SidebarNavItem, TopNavItem, TopNavigation, TopNavigationType, dashboardSidebarNavItems, topNavigationTypes } from "@portal/libs/nav-data/navigationData";
+import { SidebarNavItem, TopNavItem, TopNavigation, TopNavigationType, configurationSidebarNavItems, dashboardSidebarNavItems, diagnosticsSidebarNavItems, helpSidebarNavItems, topNavigationTypes } from "@portal/libs/nav-data/navigationData";
 
 
 export const EntryPoint = () => {
@@ -22,6 +22,14 @@ export const EntryPoint = () => {
             case topNavigationTypes.dashboard:
                 setSidebarNavItems(dashboardSidebarNavItems);
                 break;
+            case topNavigationTypes.configuration:
+                setSidebarNavItems(configurationSidebarNavItems);
+                break;
+            case topNavigationTypes.diagnostics:
+                setSidebarNavItems(diagnosticsSidebarNavItems);
+                break;
+            case topNavigationTypes.help:
+                setSidebarNavItems(helpSidebarNavItems);
             default:
                 break;
         }
