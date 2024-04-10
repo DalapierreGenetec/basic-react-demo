@@ -1,3 +1,6 @@
+import { TopNavItem, TopNavigationType } from "@portal/libs/nav-data/navigationData"
+
 export interface TopNavProps {
-    currentNav?: string
+    topNavItems: TopNavItem[]
+    currentNav?: TopNavigationType
 }

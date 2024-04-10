@@ -1,7 +1,6 @@
 import { TopNavTemplate } from "./topNav.template"
 import './topNav.styles.css'
 import { useEffect, useState } from "react";
-import { NavigationData } from "@portal/libs/nav-data/navigationData";
 import { TopNavProps } from "./topNav.props";
 
 export const TopNav = (props: TopNavProps) => {
@@ -10,8 +9,8 @@ export const TopNav = (props: TopNavProps) => {
 
     useEffect(() => {
         let items: string[] = [];
-        NavigationData.forEach((item) => {
-            items.push(item.topNav);
+        props.topNavItems.forEach(item => {
+            items.push(item.display);
         })
         setNavItems(items);
     }, []);

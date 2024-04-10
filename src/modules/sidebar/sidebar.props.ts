@@ -1,5 +1,5 @@
-import { SidebarItem } from "@portal/libs/sidebar/sidebarItem";
+import { SidebarNavItem } from "@portal/libs/nav-data/navigationData";
 
 export interface SidebarProps {
-    sidebarItems?: SidebarItem[]
+    sidebarItems?: SidebarNavItem[]
 }

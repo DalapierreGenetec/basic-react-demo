@@ -2,12 +2,12 @@
     background-color: #323131;
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
 .sidebar-nav-item {
     margin: 0 0;
-    width: 100%;
     height: 32px;
     padding: var(--spacing);
     display: flex;

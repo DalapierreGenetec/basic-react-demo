@@ -1,28 +1,32 @@
 import { EntryPointTemplate } from "./entryPoint.template";
 import "./entryPoint.styles.css";
 import { useEffect, useState } from "react";
-import { SidebarItem } from "@portal/libs/sidebar/sidebarItem";
-import { NavigationData } from "@portal/libs/nav-data/navigationData";
+import { SidebarNavItem, TopNavItem, TopNavigation, TopNavigationType, dashboardSidebarNavItems, topNavigationTypes } from "@portal/libs/nav-data/navigationData";
+
 
 export const EntryPoint = () => {
 
-    const [currentNav, setCurrentNav] = useState<string>();
-    const [sidebarNavItems, setSidebarNavItems] = useState<SidebarItem[]>([]);
+    const [currentNav, setCurrentNav] = useState<TopNavigationType>();
+    const [sidebarNavItems, setSidebarNavItems] = useState<SidebarNavItem[]>([]);
 
     useEffect(() => {
-        if (NavigationData.length > 0) {
-            const defaultNav = NavigationData[0];
-            setCurrentNav(defaultNav.topNav);
+        if (TopNavigation.length > 0) {
+            const defaultNav = TopNavigation[0];
+            setCurrentNav(defaultNav.type);
+
         }
     }, [])
 
     useEffect(() => {
-        const newNavData = NavigationData.find(item => item.topNav === currentNav);
-        if (newNavData) {
-            setSidebarNavItems(newNavData.sideNav);
+        switch (currentNav) {
+            case topNavigationTypes.dashboard:
+                setSidebarNavItems(dashboardSidebarNavItems);
+                break;
+            default:
+                break;
         }
     }, [currentNav])
     
 
-    return EntryPointTemplate(sidebarNavItems, currentNav);
+    return EntryPointTemplate(sidebarNavItems, TopNavigation, currentNav);
 }

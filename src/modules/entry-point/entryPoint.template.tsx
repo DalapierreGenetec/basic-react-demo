@@ -1,10 +1,10 @@
 import { TopNav } from "@portal/modules/top-nav";
 import { Sidebar } from "@portal/modules/sidebar";
-import { SidebarItem } from "@portal/libs/sidebar/sidebarItem";
+import { SidebarNavItem, TopNavItem, TopNavigationType } from "@portal/libs/nav-data/navigationData";
 
-export const EntryPointTemplate = (sidebarNavItems: SidebarItem[], currentNav?: string) => (
+export const EntryPointTemplate = (sidebarNavItems: SidebarNavItem[], topNavItems: TopNavItem[], currentNav?: TopNavigationType) => (
     <div id="entry-point">
-        <TopNav currentNav={currentNav}/>
+        <TopNav currentNav={currentNav} topNavItems={topNavItems}/>
         <div id="app-container">
             <Sidebar sidebarItems={sidebarNavItems} />
             <div id="content-region">
